@@ -518,7 +518,7 @@ void tny_set_ports(teenyat *t, tny_word *a, tny_word *b);
  * @param port_change
  *   Callback for handling external port level changes
  */
-void tny_port_change(teenyat *t, TNY_PORT_CHANGE_FNPTR port_change);
+void tny_set_port_change_cb(teenyat *t, TNY_PORT_CHANGE_FNPTR port_change);
 
 /**
  * @brief  
@@ -530,7 +530,7 @@ void tny_port_change(teenyat *t, TNY_PORT_CHANGE_FNPTR port_change);
  * @note
  *   Call after tny_init (initialization clears the instance).
  */
-void tny_bus_read(teenyat *t, TNY_READ_FROM_BUS_FNPTR bus_read);
+void tny_set_bus_read_cb(teenyat *t, TNY_READ_FROM_BUS_FNPTR bus_read);
 
 /**
  * @brief
@@ -542,7 +542,7 @@ void tny_bus_read(teenyat *t, TNY_READ_FROM_BUS_FNPTR bus_read);
  * @note
  *   Call after tny_init (initialization clears the instance).
  */
-void tny_bus_write(teenyat *t, TNY_WRITE_TO_BUS_FNPTR bus_write);
+void tny_set_bus_write_cb(teenyat *t, TNY_WRITE_TO_BUS_FNPTR bus_write);
 
 /**
  * @brief

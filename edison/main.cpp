@@ -155,9 +155,9 @@ int main(int argc, char* argv[])
     FILE *bin_file = fopen(fileName.c_str(), "rb");
     if(bin_file != NULL) {
         tny_init_from_file(&t, bin_file);
-        tny_bus_read(&t, bus_read);
-        tny_bus_write(&t, bus_write);
-        tny_port_change(&t,port_change);
+        tny_set_bus_read_cb(&t, bus_read);
+        tny_set_bus_write_cb(&t, bus_write);
+        tny_set_port_change_cb(&t,port_change);
         fclose(bin_file);
     }else {
         std::cout << "Failed to init bin file (invalid path?)" << std::endl;
